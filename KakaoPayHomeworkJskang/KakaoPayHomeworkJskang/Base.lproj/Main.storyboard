@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ImageListViewController" customModule="KakaoPayHomeworkJskang" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NGw-ho-IT6">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1s-7O-jHc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search photos" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XJt-sn-FiG">
+                                        <rect key="frame" x="5" y="5" width="404" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="XJt-sn-FiG" firstAttribute="top" secondItem="c1s-7O-jHc" secondAttribute="top" constant="5" id="4M6-qL-1lu"/>
+                                    <constraint firstItem="XJt-sn-FiG" firstAttribute="leading" secondItem="c1s-7O-jHc" secondAttribute="leading" constant="5" id="8KX-MG-wEE"/>
+                                    <constraint firstAttribute="trailing" secondItem="XJt-sn-FiG" secondAttribute="trailing" constant="5" id="CPt-l7-pxT"/>
+                                    <constraint firstAttribute="height" constant="50" id="Z3j-sl-Dda"/>
+                                    <constraint firstAttribute="bottom" secondItem="XJt-sn-FiG" secondAttribute="bottom" constant="5" id="pxa-fT-VCK"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="xQo-PA-YWY">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c1s-7O-jHc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6iq-72-kmx"/>
+                            <constraint firstItem="xQo-PA-YWY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="7R8-d1-FRh"/>
+                            <constraint firstItem="c1s-7O-jHc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BbK-Gf-oV7"/>
+                            <constraint firstItem="NGw-ho-IT6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VaO-ys-G7F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NGw-ho-IT6" secondAttribute="bottom" id="W5i-DH-q0l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c1s-7O-jHc" secondAttribute="trailing" id="WTD-Sn-dNn"/>
+                            <constraint firstItem="xQo-PA-YWY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="XMb-fk-fs3"/>
+                            <constraint firstItem="NGw-ho-IT6" firstAttribute="top" secondItem="c1s-7O-jHc" secondAttribute="bottom" id="amy-e9-Yzw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NGw-ho-IT6" secondAttribute="trailing" id="eGR-Kz-oFd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageListTableView" destination="NGw-ho-IT6" id="hVv-CN-kX4"/>
+                        <outlet property="loadingView" destination="xQo-PA-YWY" id="ATm-q0-1OL"/>
+                        <outlet property="searchTextField" destination="XJt-sn-FiG" id="FDC-2b-voJ"/>
+                        <outlet property="tableViewBottonConstraint" destination="W5i-DH-q0l" id="OPr-98-jA8"/>
+                        <outlet property="tableViewTopConstraint" destination="amy-e9-Yzw" id="sAp-c4-tVB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="68"/>
+        </scene>
+    </scenes>
+</document>
